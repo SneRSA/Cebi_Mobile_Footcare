@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Cebi’s Mobile Footcare</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Cebi’s Mobile Footcare</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services & Gallery</a></li>
+                <li><a href="booking.html">Book an Appointment</a></li>
+                <li><a href="contact.html">Contact</a></li> <!-- Contact page link -->
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions, feel free to reach out to us!</p>
+        
+        <!-- Contact Form -->
+        <form action="https://formspree.io/f/xeoqdqqo" method="POST">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn-primary">Submit</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Cebi's Mobile Footcare | All Rights Reserved</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

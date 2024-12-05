@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cebi’s Mobile Footcare - Services & Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Cebi’s Mobile Footcare</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services & Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li> <!-- Corrected contact page link -->
+                <li><a href="booking.html">Book an Appointment</a></li> <!-- Moved here -->
+
+            
+            </ul>
+        </nav>
+    </header>
+
+    <section class="services">
+        <h2>Our Current Services</h2>
+        <ul>
+            <li>Removal of Corns & Calluses</li>
+            <li>Sole Repairing & Foot Soak</li>
+            <li>Toenail Trimming & Ingrown Toenail Treatment</li>
+            <li>Foot Scrub & Soothing Foot Massages</li>
+            <li>Itchy & Smelly Feet Treatment</li>
+            <li>Blisters & Bunions Treatment</li>
+        </ul>
+    </section>
+
+    <section class="gallery">
+        <h2>Our Work</h2>
+        <div class="image-gallery">
+                        
+            <!-- Image 2 -->
+            <img src="assets/images/2.jpg" alt="Footcare Image 2">
+            
+            <!-- Image 3 -->
+            <img src="assets/images/1.jpg" alt="Footcare Image 3">
+            
+            <img src="assets/images/3.jpg" alt="Footcare Image 3">
+            
+            <img src="assets/images/4.jpg" alt="Footcare Image 3">
+            
+            <img src="assets/images/5.jpg" alt="Footcare Image 3">
+            
+            <img src="assets/images/6.jpg" alt="Footcare Image 3">
+            
+            <!-- Add more images as needed -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Cebi's Mobile Footcare | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        // JavaScript to handle image preview
+        const imageUpload = document.getElementById("imageUpload");
+        const imageDisplay = document.getElementById("imageDisplay");
+
+        imageUpload.addEventListener("change", function (event) {
+            const files = event.target.files;
+            imageDisplay.innerHTML = ""; // Clear any existing images
+
+            // Loop through the files and display them
+            for (let i = 0; i < files.length; i++) {
+                const file = files[i];
+                const reader = new FileReader();
+
+                reader.onload = function (e) {
+                    const imgElement = document.createElement("img");
+                    imgElement.src = e.target.result;
+                    imgElement.alt = file.name;
+                    imgElement.classList.add("gallery-image");
+                    imageDisplay.appendChild(imgElement);
+                };
+
+                reader.readAsDataURL(file); // Read the file as a data URL
+            }
+        });
+    </script>
+    
+    <script src="scripts.js"></script>
+</body>
+</html>
