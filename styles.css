@@ -1,368 +1,299 @@
-/* Header Styles */
-header {
-    background-image: url('https://scontent-jnb2-1.xx.fbcdn.net/v/t39.30808-6/334755622_158082370377831_786698882854545359_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFGEnKL9iqqOsWuUi0RUCzhJWa1kFShroIlZrWQVKGugn7EstqO_oJbEDFFDNK-15UfT0IfC0SbBdjP1rVpFiCp&_nc_ohc=J7MYQhtFGi0Q7kNvgHA9URm&_nc_zt=23&_nc_ht=scontent-jnb2-1.xx&_nc_gid=AHRSvGLRxdrjEJLSKjlxINY&oh=00_AYDp6ZeriRDHw8iK_k7OoHWWIdQOjvLuf5oUIz4iITnNnA&oe=67576523'); /* Replace with the correct path to your image */
-    background-size: cover; /* Makes the background image cover the entire header */
-    background-position: center; /* Centers the background image */
-    padding: 20px 0;
-    color: white;
-    text-align: center;
-}
-
-header nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-header nav ul li a {
-    color: black; /* Change font color to black */
-    text-decoration: none;
-    font-size: 1rem;
-}
-
-header nav ul li a:hover {
-    color: #f1a33f; /* Orange hover color */
-}
-
-/* Ensure the header text color remains white for the main title */
-header h1 {
-    color: #e0892b;
-    font-size: 2.5rem;
-}
-
-
-
-
-
-
-
-
-/* Global Styles */
+/* General Styling */
 body {
-    font-family: 'Lato', sans-serif;
-    background-color: #eef2f5; /* Soft light grey background for calmness */
-    color: #444;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background-color: #f0f8ff; /* Light Blue Background */
     margin: 0;
     padding: 0;
-}
-
-header {
-    background-color: #1E3A56; /* Deep blue background for professionalism */
-    color: #fff;
-    padding: 30px 20px;
-    text-align: center;
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-}
-
-header h1 {
-    font-size: 2.8rem;
-    margin: 0;
-    font-weight: 600;
-    letter-spacing: 2px;
-}
-
-header nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 15px;
-}
-
-header nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    transition: color 0.3s ease-in-out;
-}
-
-header nav ul li a:hover {
-    color: #f1a33f; /* Accent color for hover */
-    transform: translateY(-3px);
-}
-
-/* Hero Section */
-.hero {
-    background: linear-gradient(145deg, #1E3A56, #2C5F75);
-    color: #fff;
-    padding: 100px 20px;
-    text-align: center;
-}
-
-.hero h2 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-}
-
-.hero p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    margin-bottom: 30px;
-    color: #f9f9f9;
-}
-
-/* Section Styling */
-section {
-    padding: 60px 20px;
-    text-align: center;
-    background-color: #fff;
-    margin: 30px 0;
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 20px;
-    font-weight: 500;
-}
-
-p {
-    font-size: 1rem;
-    color: #555;
     line-height: 1.6;
 }
 
-/* Services Section */
-ul {
-    list-style: none;
+/* Header */
+header {
+    background-color: #FF6F61;  /* Vibrant Coral */
+    padding: 2px 0;
+    color: white;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-15px);
+    transition: transform 0.3s ease-in-out;
+}
+
+header:hover {
+    transform: translateY(0);
+}
+
+header h1 {
+    font-family: 'Lora', serif;
+    font-size: 3rem;
+    margin: 0;
+    letter-spacing: 3px;
+    font-weight: 700;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Navbar Styling */
+nav ul {
+    list-style-type: none;
     padding: 0;
-    text-align: left;
-    margin-top: 20px;
+    margin-top: 15px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
     font-size: 1.1rem;
-}
-
-ul li {
-    color: #333;
-    margin-bottom: 15px;
-    padding-left: 25px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
     position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
-ul li:before {
-    content: '✔';
+nav ul li a:hover,
+nav ul li a.active {
+    color: #FFB74D; /* Soft Yellow */
+    transform: scale(1.1);
+}
+
+nav ul li a::after {
+    content: '';
     position: absolute;
+    bottom: 0;
     left: 0;
-    color: #f1a33f; /* Orange accent */
-    font-size: 1.5rem;
-    top: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #FFB74D;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+nav ul li a:hover::after,
+nav ul li a.active::after {
+    transform: scaleX(1);
+}
+
+/* Main Content */
+main {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Services Section */
+.services {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.services h2 {
+    font-size: 2.8rem;
+    color: #FF6F61;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    justify-items: center;
+    margin-top: 20px;
+}
+
+.services-list li {
+    background: linear-gradient(135deg, #FF6F61, #FFB74D); /* Gradient Background */
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.services-list li:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.services-list h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.services-list p {
+    font-size: 1.1rem;
 }
 
 /* Gallery Section */
 .gallery {
+    background-color: #fff;
+    padding: 50px 20px;
     margin-top: 40px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .gallery h2 {
-    font-size: 2.3rem;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-.image-upload {
-    margin-top: 20px;
+    font-size: 2.5rem;
+    color: #FF6F61;
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 .image-gallery {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
-    justify-content: center;
+    justify-items: center;
 }
 
 .image-gallery img {
-    width: 320px;
-    height: 220px;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    border-radius: 8px;
     object-fit: cover;
-    border-radius: 10px;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .image-gallery img:hover {
-    transform: scale(1.05); /* Smooth zoom on hover */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+    transform: scale(1.1);
+    filter: brightness(1.2);
 }
 
-/* Booking Form */
-.booking {
-    padding: 60px 20px;
-    background-color: #fff;
-    margin: 40px 0;
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
-
-.booking h2 {
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 30px;
-    font-weight: 600;
-}
-
-.form-group {
-    margin-bottom: 20px;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-label {
-    font-size: 1rem;
-    margin-bottom: 8px;
-    color: #333;
-}
-
-input, select, textarea {
-    width: 100%;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-size: 1rem;
-    margin-bottom: 20px;
-    background-color: #f9f9f9;
-    transition: border-color 0.3s ease-in-out;
-}
-
-input:focus, select:focus, textarea:focus {
-    border-color: #f1a33f;
-    outline: none;
-}
-
-input[type="submit"], .btn-primary {
-    background-color: #f1a33f;
+/* Button Styling */
+button {
+    background-color: #FF6F61; /* Vibrant Coral */
     color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
     padding: 15px 30px;
     border: none;
-    border-radius: 8px;
+    border-radius: 25px;
     cursor: pointer;
-    font-size: 1.1rem;
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-input[type="submit"]:hover, .btn-primary:hover {
-    background-color: #e08e2f; /* Darker shade on hover */
-    transform: translateY(-3px);
+button:hover {
+    background-color: #FFB74D; /* Soft Yellow */
+    transform: scale(1.05);
+}
+
+/* Form Styles */
+form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #FF6F61;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 2px solid #FF6F61;
+    border-radius: 10px;
+    font-size: 1rem;
+    color: #333;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #FFB74D; /* Soft Yellow */
+    outline: none;
 }
 
 textarea {
     resize: vertical;
+    min-height: 100px;
+}
+
+input[type="submit"] {
+    background-color: #FF6F61;
+    color: white;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #FFB74D; /* Soft Yellow */
 }
 
 /* Footer */
 footer {
     background-color: #333;
     color: white;
-    padding: 40px 20px;
     text-align: center;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+    transform: translateY(15px);
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards 1s;
 }
 
 footer p {
+    margin: 0;
     font-size: 1rem;
-    color: #f4f7fb;
-    letter-spacing: 0.5px;
 }
 
-/* Mobile Responsiveness */
+/* Animation */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 2.2rem;
-    }
-
-    header nav ul {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .image-gallery {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .image-gallery img {
-        width: 100%;
-        height: auto;
-    }
-
-    .booking h2 {
         font-size: 2rem;
     }
 
-    .form-group input,
-    .form-group textarea {
-        width: 100%;
+    nav ul li {
+        display: block;
+        margin: 10px 0;
     }
-}
 
+    .services-list {
+        grid-template-columns: 1fr;
+    }
 
-.image-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
+    .image-gallery {
+        grid-template-columns: 1fr;
+    }
 
-.image-gallery img {
-    width: 300px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
-}
+    .gallery h2 {
+        font-size: 2rem;
+    }
 
-
-.contact-details {
-    margin-top: 20px;
-    font-size: 1rem;
-    line-height: 1.6;
-}
-
-.contact-details a {
-    color: #1c1c1c;
-    text-decoration: none;
-}
-
-.contact-details a:hover {
-    color: #f1a33f;
-}
-
-.contact-details ul {
-    list-style: none;
-    padding: 0;
-}
-
-.contact-details ul li {
-    margin-bottom: 10px;
-}
-
-.contact-details ul li a {
-    color: #1c1c1c;
-    text-decoration: none;
-}
-
-.contact-details ul li a:hover {
-    color: #f1a33f;
-}
-
-.btn-primary {
-    background-color: #f1a33f; /* Orange */
-    color: white;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none; /* Removes underline */
-    font-size: 1rem;
-    cursor: pointer;
-    display: inline-block;
-    margin-top: 20px;
-    transition: background-color 0.3s ease;
-}
-
-.btn-primary:hover {
-    background-color: #e0892b; /* Darker shade of orange */
+    footer {
+        font-size: 0.9rem;
+    }
 }

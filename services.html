@@ -5,87 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cebi’s Mobile Footcare - Services & Gallery</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>Cebi’s Mobile Footcare</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services & Gallery</a></li>
-                <li><a href="contact.html">Contact</a></li> <!-- Corrected contact page link -->
-                <li><a href="booking.html">Book an Appointment</a></li> <!-- Moved here -->
-
-            
-            </ul>
-        </nav>
+        <div class="container">
+            <h1>Cebi’s Mobile Footcare</h1>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html" class="active">Services & Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="booking.html">Book an Appointment</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <section class="services">
-        <h2>Our Current Services</h2>
-        <ul>
-            <li>Removal of Corns & Calluses</li>
-            <li>Sole Repairing & Foot Soak</li>
-            <li>Toenail Trimming & Ingrown Toenail Treatment</li>
-            <li>Foot Scrub & Soothing Foot Massages</li>
-            <li>Itchy & Smelly Feet Treatment</li>
-            <li>Blisters & Bunions Treatment</li>
-        </ul>
-    </section>
+    <main>
+        <section class="services">
+            <h2>Our Services</h2>
+            <ul class="services-list">
+                <li>
+                    <h3>Removal of Corns & Calluses</h3>
+                    <p>Effective treatments to remove corns and calluses for smoother, healthier feet.</p>
+                </li>
+                <li>
+                    <h3>Sole Repairing & Foot Soak</h3>
+                    <p>Relax and rejuvenate with our sole repair and foot soak treatments.</p>
+                </li>
+                <li>
+                    <h3>Toenail Trimming & Ingrown Treatment</h3>
+                    <p>Professional care for toenail trimming and ingrown toenail treatment to alleviate pain and discomfort.</p>
+                </li>
+                <li>
+                    <h3>Foot Scrub & Soothing Massages</h3>
+                    <p>Revitalize your feet with a soothing foot scrub and relaxation massage.</p>
+                </li>
+                <li>
+                    <h3>Itchy & Smelly Feet Treatment</h3>
+                    <p>Our treatment addresses itchy feet and unpleasant odors to restore comfort.</p>
+                </li>
+                <li>
+                    <h3>Blisters & Bunions Treatment</h3>
+                    <p>Expert care for blisters and bunions to reduce pain and promote healing.</p>
+                </li>
+            </ul>
+        </section>
 
-    <section class="gallery">
-        <h2>Our Work</h2>
-        <div class="image-gallery">
-                        
-            <!-- Image 2 -->
-            <img src="assets/images/2.jpg" alt="Footcare Image 2">
-            
-            <!-- Image 3 -->
-            <img src="assets/images/1.jpg" alt="Footcare Image 3">
-            
-            <img src="assets/images/3.jpg" alt="Footcare Image 3">
-            
-            <img src="assets/images/4.jpg" alt="Footcare Image 3">
-            
-            <img src="assets/images/5.jpg" alt="Footcare Image 3">
-            
-            <img src="assets/images/6.jpg" alt="Footcare Image 3">
-            
-            <!-- Add more images as needed -->
-        </div>
-    </section>
+        <section class="gallery">
+            <h2>Our Work</h2>
+            <div class="image-gallery">
+                <!-- Add placeholder images or leave blank for now -->
+                <img src="assets/images/1.jpg" alt="Footcare Image 1">
+                <img src="assets/images/2.jpg" alt="Footcare Image 2">
+                <img src="assets/images/3.jpg" alt="Footcare Image 3">
+                <img src="assets/images/4.jpg" alt="Footcare Image 4">
+                <img src="assets/images/5.jpg" alt="Footcare Image 5">
+                <img src="assets/images/6.jpg" alt="Footcare Image 6">
+            </div>
+        </section>
+    </main>
 
     <footer>
         <p>&copy; 2024 Cebi's Mobile Footcare | All Rights Reserved</p>
     </footer>
 
-    <script>
-        // JavaScript to handle image preview
-        const imageUpload = document.getElementById("imageUpload");
-        const imageDisplay = document.getElementById("imageDisplay");
-
-        imageUpload.addEventListener("change", function (event) {
-            const files = event.target.files;
-            imageDisplay.innerHTML = ""; // Clear any existing images
-
-            // Loop through the files and display them
-            for (let i = 0; i < files.length; i++) {
-                const file = files[i];
-                const reader = new FileReader();
-
-                reader.onload = function (e) {
-                    const imgElement = document.createElement("img");
-                    imgElement.src = e.target.result;
-                    imgElement.alt = file.name;
-                    imgElement.classList.add("gallery-image");
-                    imageDisplay.appendChild(imgElement);
-                };
-
-                reader.readAsDataURL(file); // Read the file as a data URL
-            }
-        });
-    </script>
-    
     <script src="scripts.js"></script>
 </body>
 </html>

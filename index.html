@@ -3,65 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cebi’s Mobile Footcare</title>
+    <meta name="description" content="Cebi’s Mobile Footcare offers professional foot healthcare services and products in the Eastern Cape. Schedule an appointment today!">
+    <meta name="keywords" content="footcare, mobile footcare, foot health, Cebi’s Footcare, foot massage, Eastern Cape">
+    <meta name="author" content="Cebi’s Mobile Footcare">
+    <title>Cebi’s Mobile Footcare | Professional Footcare Services</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="assets/js/script.js"></script>
-
+    <script src="assets/js/script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
+
+        <div class="logo">
+            <img src="https://scontent-cpt1-1.xx.fbcdn.net/v/t39.30808-6/334755622_158082370377831_786698882854545359_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFGEnKL9iqqOsWuUi0RUCzhJWa1kFShroIlZrWQVKGugn7EstqO_oJbEDFFDNK-15UfT0IfC0SbBdjP1rVpFiCp&_nc_ohc=URE8zjEQAXgQ7kNvgE-J0ac&_nc_zt=23&_nc_ht=scontent-cpt1-1.xx&_nc_gid=A9xWRRtyjlFXLiSGnu1oH6p&oh=00_AYDSv_5ClkOAxj-_ZK0iTMhj4NQGYVsYLN9PoqF2z-6Mmg&oe=67819523" alt="Cebi's Mobile Footcare Logo" class="logo-img">
+        </div>
+
+        <nav class="main-nav">
+            <div class="logo">Cebi’s Footcare</div>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
                 <li><a href="services.html">Services & Gallery</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="booking.html">Book an Appointment</a></li> <!-- Moved here -->
+                <li><a href="booking.html" class="btn-nav">Book Now</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="video-container">
-        <h2>Watch Our Footcare Introduction</h2>
-        <video width="40%" controls>
-            <source src="assets/videos/FootcareVideo.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </section>
-    
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Welcome to Cebi’s Mobile Footcare</h1>
+                <p>Professional footcare services at your doorstep. Treat your feet with the care they deserve!</p>
+                <a href="booking.html" class="btn-primary">Book an Appointment</a>
+            </div>
+        </section>
 
-    <section class="overview">
-        <h2>Overview - About the Business</h2>
-        <p>
-            Cebi’s Mobile Footcare was founded by Cebisa Diniwe in the Eastern Cape (PE). Since its inception in 2021 and formal registration in September 2022, we have aimed to improve the livelihoods of those suffering from foot conditions and disorders. Our focus is on providing professional foot healthcare services and products, utilizing traditional healing hand massages to offer efficient treatment plans.
-        </p>
-    </section>
+        <!-- About Section -->
+        <section class="about">
+            <div class="about-content">
+                <h2>About Us</h2>
+                <p>
+                    Cebi’s Mobile Footcare was founded by Cebisa Diniwe in the Eastern Cape (PE). Since 2021, we have been dedicated to improving lives through professional foot healthcare services and products. Our mission is to provide accessible and effective treatments, including traditional healing hand massages, to address various foot conditions.
+                </p>
+            </div>
+        </section>
 
-    <section class="contact">
-        <h2>Contact Us</h2>
-        <p>If you would like to schedule an appointment or learn more about our services, please get in touch with us.</p>
-        
-        <div class="contact-details">
-            <p><strong>Phone Number:</strong> <a href="tel:+27640895231">064 089 5231</a></p>
-            <p><strong>Website:</strong> <a href="https://www.cebismobilefootcare.co.za" target="_blank">www.cebismobilefootcare.co.za</a></p>
-            <p><strong>Follow us on Social Media:</strong></p>
-            <ul>
-                <li><a href="https://www.facebook.com/Cebi's-Mobile-Footcare" target="_blank">Facebook</a></li>
-                <li><a href="https://www.instagram.com/Cebi's-Mobile-Footcare" target="_blank">Instagram</a></li>
-                <li><a href="https://www.tiktok.com/@Cebi's-Mobile-Footcare" target="_blank">TikTok</a></li>
-            </ul>
-        </div>
-    
-        <!-- Get in Touch Button -->
-        <a href="contact.html">
-            <button class="btn-primary">Get in Touch</button>
-        </a>
-    </section>
-    
+        <!-- Services Section -->
+        <section class="services">
+            <h2>Our Services</h2>
+            <div class="service-cards">
+                <div class="card">
+                    <h3>Callus Removal</h3>
+                    <p>Effective treatments to remove calluses and restore healthy skin.</p>
+                </div>
+                <div class="card">
+                    <h3>Foot Massages</h3>
+                    <p>Relaxing foot massages to relieve stress and improve circulation.</p>
+                </div>
+                <div class="card">
+                
+                    <h3>Ingrown Toenail Treatment</h3>
+                    <p>Professional care to alleviate pain and prevent infections.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact">
+            <h2>Contact Us</h2>
+            <p>Have questions or want to book an appointment? Reach out to us!</p>
+            <div class="contact-details">
+                <p><strong>Phone:</strong> <a href="tel:+27640895231">064 089 5231</a></p>
+                <p><strong>Email:</strong> <a href="mailto:info@cebismobilefootcare.co.za">info@cebismobilefootcare.co.za</a></p>
+                <p><strong>Website:</strong> <a href="https://www.cebismobilefootcare.co.za" target="_blank" rel="noopener noreferrer">www.cebismobilefootcare.co.za</a></p>
+            </div>
+            <a href="contact.html" class="btn-primary">Get in Touch</a>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2024 Cebi's Mobile Footcare | All Rights Reserved</p>
+        <p>&copy; 2025 Cebi’s Mobile Footcare | All Rights Reserved</p>
     </footer>
 
-    
+    <script src="assets/js/script.js" defer></script>
+
 </body>
 </html>
