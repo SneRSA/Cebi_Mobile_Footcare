@@ -3,73 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the professional footcare services and gallery of Cebi’s Mobile Footcare.">
     <title>Cebi’s Mobile Footcare - Services & Gallery</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>Cebi’s Mobile Footcare</h1>
-            <nav>
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="Cebi's Mobile Footcare Logo" class="logo-img">
+            </div>
+            <nav class="main-nav">
                 <ul class="nav-list">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html" class="active">Services & Gallery</a></li>
                     <li><a href="contact.html">Contact</a></li>
-                    <li><a href="booking.html">Book an Appointment</a></li>
+                    <li><a href="booking.html" class="btn-nav">Book Now</a></li>
+                    <li><a href="about.html">About Us</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
-        <section class="services">
+        <section class="services-section">
             <h2>Our Services</h2>
-            <ul class="services-list">
-                <li>
+            <div class="service-cards">
+                <div class="card">
                     <h3>Removal of Corns & Calluses</h3>
                     <p>Effective treatments to remove corns and calluses for smoother, healthier feet.</p>
-                </li>
-                <li>
+                </div>
+                <div class="card">
                     <h3>Sole Repairing & Foot Soak</h3>
                     <p>Relax and rejuvenate with our sole repair and foot soak treatments.</p>
-                </li>
-                <li>
+                </div>
+                <div class="card">
                     <h3>Toenail Trimming & Ingrown Treatment</h3>
                     <p>Professional care for toenail trimming and ingrown toenail treatment to alleviate pain and discomfort.</p>
-                </li>
-                <li>
-                    <h3>Foot Scrub & Soothing Massages</h3>
-                    <p>Revitalize your feet with a soothing foot scrub and relaxation massage.</p>
-                </li>
-                <li>
-                    <h3>Itchy & Smelly Feet Treatment</h3>
-                    <p>Our treatment addresses itchy feet and unpleasant odors to restore comfort.</p>
-                </li>
-                <li>
-                    <h3>Blisters & Bunions Treatment</h3>
-                    <p>Expert care for blisters and bunions to reduce pain and promote healing.</p>
-                </li>
-            </ul>
-        </section>
-
-        <section class="gallery">
-            <h2>Our Work</h2>
-            <div class="image-gallery">
-                <!-- Add placeholder images or leave blank for now -->
-                <img src="assets/images/1.jpg" alt="Footcare Image 1">
-                <img src="assets/images/2.jpg" alt="Footcare Image 2">
-                <img src="assets/images/3.jpg" alt="Footcare Image 3">
-                <img src="assets/images/4.jpg" alt="Footcare Image 4">
-                <img src="assets/images/5.jpg" alt="Footcare Image 5">
-                <img src="assets/images/6.jpg" alt="Footcare Image 6">
+                </div>
+                <div class="card">
+                    <img src="assets/images/toenail-trim.jpg" alt="Toenail Trimming & Ingrown Treatment" class="service-img">
+                    <h3>Toenail Trimming & Ingrown Treatment</h3>
+                    <p>Professional care for toenail trimming and ingrown toenail treatment to alleviate pain and discomfort.</p>
+                </div>
             </div>
         </section>
+        
+        <section class="before-after-gallery">
+            <h2>Before & After Gallery</h2>
+            <div class="gallery">
+                <!-- Before & After Image Pairs -->
+                <div class="before-after">
+                    <div class="before">
+                        <img src="assets/images/1.jpg" alt="Before Image 1">
+                    </div>
+                    <div class="after">
+                        <img src="assets/images/1.jpg" alt="After Image 1">
+                    </div>
+                </div>
+                <div class="before-after">
+                    <div class="before">
+                        <img src="assets/images/2.jpg" alt="Before Image 2">
+                    </div>
+                    <div class="after">
+                        <img src="assets/images/2.jpg" alt="After Image 2">
+                    </div>
+                </div>
+                <div class="before-after">
+                    <div class="before">
+                        <img src="assets/images/3.jpg" alt="Before Image 3">
+                    </div>
+                    <div class="after">
+                        <img src="assets/images/3.jpg" alt="After Image 3">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
     </main>
 
     <footer>
-        <p>&copy; 2024 Cebi's Mobile Footcare | All Rights Reserved</p>
+        <p>&copy; 2025 Cebi's Mobile Footcare | All Rights Reserved</p>
     </footer>
 
     <script src="scripts.js"></script>

@@ -5,45 +5,115 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Cebi’s Mobile Footcare</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
-        <h1>Cebi’s Mobile Footcare</h1>
-        <nav>
-            <ul>
+        <div class="main-nav">
+            <!-- Logo Image -->
+            <img src="assets/images/logo.png" alt="Cebi's Mobile Footcare" class="logo-img">
+            
+            <!-- Navigation Links -->
+            <ul class="nav-list">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services & Gallery</a></li>
-                <li><a href="booking.html">Book an Appointment</a></li>
-                <li><a href="contact.html">Contact</a></li> <!-- Contact page link -->
+                <li><a href="services.html" class="active">Services & Gallery</a></li>
+                <li><a href="booking.html" class="btn-nav">Book Now</a></li>
             </ul>
-        </nav>
+        </div>
     </header>
 
-    <section class="contact">
-        <h2>Contact Us</h2>
-        <p>If you have any questions, feel free to reach out to us!</p>
-        
-        <!-- Contact Form -->
-        <form action="https://formspree.io/f/xeoqdqqo" method="POST">
-            <div class="form-group">
-                <label for="name">Full Name</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-            </div>
-            <button type="submit" class="btn-primary">Submit</button>
-        </form>
-    </section>
+    <main>
+        <section class="contact">
+            <h2>Contact Us</h2>
+            <p>Have questions? We're here to help! Reach out to us, and we’ll get back to you as soon as possible.</p>
+            
+            <form action="https://formspree.io/f/xeoqdqqo" method="POST" class="contact-form">
+                <fieldset>
+                    <legend>Get in Touch</legend>
+            
+                    <!-- Name Field -->
+                    <div class="form-group">
+                        <label for="name">Full Name <span>*</span></label>
+                        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                    </div>
+            
+                    <!-- Email Field -->
+                    <div class="form-group">
+                        <label for="email">Email Address <span>*</span></label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+            
+                    <!-- Phone Field -->
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" pattern="^\+?[1-9]\d{1,14}$" title="Phone number should start with a country code followed by numbers (e.g., +1234567890)">
+                    </div>
+            
+                    <!-- Subject Dropdown -->
+                    <div class="form-group">
+                        <label for="subject">Subject <span>*</span></label>
+                        <select id="subject" name="subject" required>
+                            <option value="" disabled selected>Select a subject</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="appointment">Book an Appointment</option>
+                            <option value="services">Service Information</option>
+                            <option value="feedback">Feedback / Complaints</option>
+                        </select>
+                    </div>
+            
+                    <!-- Message Field -->
+                    <div class="form-group">
+                        <label for="message">Message <span>*</span></label>
+                        <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
+                    </div>
+            
+                    <!-- Checkbox for Agreement -->
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="agree" name="agree" required>
+                        <label for="agree">I agree to the <a href="#">terms & conditions</a></label>
+                    </div>
+            
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn-primary">Send Message</button>
+                </fieldset>
+            </form>
 
+        </section>
+
+        <!-- Google Map Section -->
+        <section class="map">
+            <h2>Find Us</h2>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509399!2d144.95373531531527!3d-37.8162794420217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d5df0dfde2f%3A0x5045675218ce640!2sYour+Business+Location!5e0!3m2!1sen!2sus!4v1619828873823!5m2!1sen!2sus" 
+                    width="100%" height="350" style="border:0; border-radius:10px;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
     <footer>
         <p>&copy; 2024 Cebi's Mobile Footcare | All Rights Reserved</p>
+        <div class="social-media">
+            <a href="https://www.facebook.com/yourpage" target="_blank" class="social-link">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/yourpage" target="_blank" class="social-link">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://wa.me/yourwhatsappnumber" target="_blank" class="social-link">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
     </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/yourwhatsappnumber" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <script src="scripts.js"></script>
 </body>
