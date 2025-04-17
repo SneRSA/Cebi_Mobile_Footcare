@@ -1,107 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Book your appointment with Cebi’s Mobile Footcare for professional and convenient footcare services.">
-    <title>Cebi’s Mobile Footcare - Book an Appointment</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Book Appointment | Cebi's Mobile Foot Care</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <header>
-        <div class="main-nav">
-            <!-- Logo Image -->
-            <img src="assets/images/logo.png" alt="Cebi's Mobile Footcare" class="logo-img">
-            
-            <!-- Navigation Links -->
-            <ul class="nav-list">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services & Gallery</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="about.html">About Us</a></li>
-            </ul>
-        </div>
-    </header>
 
-    <main>
-        <section class="booking">
-            <div class="container">
-                <h2>Book Your Appointment</h2>
-                <p>Fill out the form below to schedule your footcare appointment. We’ll get back to you to confirm the details.</p>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">Cebi's Mobile Foot Care</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="specials.html">Specials</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link active" href="booking.html">Booking</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-                <form action="https://formspree.io/f/xeoqdqqo" method="POST" class="booking-form">
-                    <div class="form-group">
-                        <label for="name">Full Name <span class="required">*</span></label>
-                        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
-                    </div>
+<!-- Booking Form Section -->
+<section class="section bg-light py-5">
+  <div class="container">
+    <h2 class="text-center mb-5">Book an Appointment</h2>
 
-                    <div class="form-group">
-                        <label for="email">Email Address <span class="required">*</span></label>
-                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="phone">Phone Number <span class="required">*</span></label>
-                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="service">Preferred Service <span class="required">*</span></label>
-                        <select id="service" name="service" required>
-                            <option value="" disabled selected>Select a service</option>
-                            <option value="callus-removal">Callus Removal</option>
-                            <option value="toenail-trimming">Toenail Trimming</option>
-                            <option value="foot-massage">Soothing Foot Massage</option>
-                            <option value="ingrown-toenail">Ingrown Toenail Treatment</option>
-                            <option value="bunion-treatment">Bunion Treatment</option>
-                            <option value="blisters-treatment">Blisters Treatment</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="date">Preferred Date <span class="required">*</span></label>
-                        <input type="date" id="date" name="date" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="time">Preferred Time <span class="required">*</span></label>
-                        <input type="time" id="time" name="time" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="message">Additional Notes</label>
-                        <textarea id="message" name="message" rows="4" placeholder="Any additional information or preferences?"></textarea>
-                    </div>
-
-                    <button type="submit" class="btn-primary">Book Appointment</button>
-                </form>
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="p-4 shadow-sm bg-white rounded-3">
+          <form id="bookingForm">
+            <div class="mb-3">
+              <label for="fullName" class="form-label">Full Name *</label>
+              <input type="text" class="form-control" id="fullName" name="Full Name" required>
             </div>
-        </section>
-    </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Cebi's Mobile Footcare | All Rights Reserved</p>
+            <div class="mb-3">
+              <label for="phone" class="form-label">Phone Number *</label>
+              <input type="tel" class="form-control" id="phone" name="Phone" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="email" class="form-label">Email Address (optional)</label>
+              <input type="email" class="form-control" id="email" name="Email">
+            </div>
+
+            <div class="mb-3">
+              <label for="service" class="form-label">Service Required *</label>
+              <select class="form-select" id="service" name="Service" required>
+                <option value="" disabled selected>Select a service</option>
+                <option>Basic Foot Care</option>
+                <option>Hand & Nail Treatment</option>
+                <option>Combo (Foot + Hand)</option>
+                <option>Follow-up Appointment</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label for="date" class="form-label">Preferred Date *</label>
+              <input type="date" class="form-control" id="date" name="Preferred Date" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="time" class="form-label">Preferred Time *</label>
+              <input type="time" class="form-control" id="time" name="Preferred Time" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="location" class="form-label">Your Location (Suburb or Area) *</label>
+              <input type="text" class="form-control" id="location" name="Location" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="message" class="form-label">Additional Notes (optional)</label>
+              <textarea class="form-control" id="message" name="Notes" rows="4"></textarea>
+            </div>
+
+            <div class="text-center">
+              <button type="button" class="btn btn-success btn-lg" onclick="sendWhatsAppBooking()">
+                <i class="bi bi-whatsapp"></i> Book via WhatsApp
+              </button>
+            </div>
+          </form>
+
+          <div class="alert alert-info mt-4 text-center" role="alert">
+            We'll confirm your booking via WhatsApp. Please ensure your phone number is correct.
+          </div>
         </div>
-    </footer>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <script>
-        document.querySelector('.booking-form').addEventListener('submit', function(e) {
-            e.preventDefault();
+<!-- Footer -->
+<footer class="py-4 bg-dark text-light">
+  <div class="container text-center">
+    <p class="mb-1">&copy; 2025 Cebi's Mobile Foot Care. All rights reserved.</p>
+    <p>Owned and operated by <strong>Cebisa Diniwe</strong>, Gqeberha, Eastern Cape.</p>
+    <div class="d-flex justify-content-center gap-3">
+      <a class="text-light" href="https://www.facebook.com/profile.php?id=100077425159238" target="_blank">Facebook</a>
+      <a class="text-light" href="https://www.youtube.com" target="_blank">YouTube</a>
+      <a class="text-light" href="https://www.tiktok.com" target="_blank">TikTok</a>
+    </div>
+  </div>
+</footer>
 
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const phone = document.getElementById('phone').value;
-            const service = document.getElementById('service').value;
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-            if (!name || !email || !phone || !service) {
-                alert('Please fill out all required fields.');
-                return;
-            }
+<script>
+  function sendWhatsAppBooking() {
+    const name = document.getElementById('fullName').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const service = document.getElementById('service').value;
+    const date = document.getElementById('date').value;
+    const time = document.getElementById('time').value;
+    const location = document.getElementById('location').value.trim();
+    const notes = document.getElementById('message').value.trim();
 
-            alert('Your appointment request has been submitted successfully.');
-            this.submit();
-        });
-    </script>
+    if (!name || !phone || !service || !date || !time || !location) {
+      alert("Please fill in all required fields.");
+      return;
+    }
+
+    const message = `Hello! I'd like to book an appointment with Cebi's Mobile Foot Care.%0A%0A` +
+      `*Name:* ${name}%0A` +
+      `*Phone:* ${phone}%0A` +
+      (email ? `*Email:* ${email}%0A` : '') +
+      `*Service:* ${service}%0A` +
+      `*Date:* ${date}%0A` +
+      `*Time:* ${time}%0A` +
+      `*Location:* ${location}%0A` +
+      (notes ? `*Notes:* ${notes}%0A` : '');
+
+    const whatsappNumber = "27640895231";
+    const url = `https://wa.me/${whatsappNumber}?text=${message}`;
+    window.open(url, '_blank');
+  }
+</script>
+
 </body>
 </html>

@@ -1,120 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Cebi’s Mobile Footcare</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cebi's Mobile Foot Care | Contact</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .map-responsive {
+      overflow: hidden;
+      padding-bottom: 56.25%;
+      position: relative;
+      height: 0;
+    }
+    .map-responsive iframe {
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      border: 0;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="main-nav">
-            <!-- Logo Image -->
-            <img src="assets/images/logo.png" alt="Cebi's Mobile Footcare" class="logo-img">
-            
-            <!-- Navigation Links -->
-            <ul class="nav-list">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html" class="active">Services & Gallery</a></li>
-                <li><a href="booking.html" class="btn-nav">Book Now</a></li>
-            </ul>
-        </div>
-    </header>
 
-    <main>
-        <section class="contact">
-            <h2>Contact Us</h2>
-            <p>Have questions? We're here to help! Reach out to us, and we’ll get back to you as soon as possible.</p>
-            
-            <form action="https://formspree.io/f/xeoqdqqo" method="POST" class="contact-form">
-                <fieldset>
-                    <legend>Get in Touch</legend>
-            
-                    <!-- Name Field -->
-                    <div class="form-group">
-                        <label for="name">Full Name <span>*</span></label>
-                        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
-                    </div>
-            
-                    <!-- Email Field -->
-                    <div class="form-group">
-                        <label for="email">Email Address <span>*</span></label>
-                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                    </div>
-            
-                    <!-- Phone Field -->
-                    <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" pattern="^\+?[1-9]\d{1,14}$" title="Phone number should start with a country code followed by numbers (e.g., +1234567890)">
-                    </div>
-            
-                    <!-- Subject Dropdown -->
-                    <div class="form-group">
-                        <label for="subject">Subject <span>*</span></label>
-                        <select id="subject" name="subject" required>
-                            <option value="" disabled selected>Select a subject</option>
-                            <option value="general">General Inquiry</option>
-                            <option value="appointment">Book an Appointment</option>
-                            <option value="services">Service Information</option>
-                            <option value="feedback">Feedback / Complaints</option>
-                        </select>
-                    </div>
-            
-                    <!-- Message Field -->
-                    <div class="form-group">
-                        <label for="message">Message <span>*</span></label>
-                        <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
-                    </div>
-            
-                    <!-- Checkbox for Agreement -->
-                    <div class="form-group checkbox-group">
-                        <input type="checkbox" id="agree" name="agree" required>
-                        <label for="agree">I agree to the <a href="#">terms & conditions</a></label>
-                    </div>
-            
-                    <!-- Submit Button -->
-                    <button type="submit" class="btn-primary">Send Message</button>
-                </fieldset>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Cebi's Mobile Foot Care</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="specials.html">Specials</a></li>
+          <li class="nav-item"><a class="nav-link" href="terms.html">Terms</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contact Form -->
+  <section class="section bg-light py-5" data-aos="fade-up">
+    <div class="container">
+      <h2 class="text-center mb-4">📞 Get in Touch</h2>
+      <p class="text-center mb-5">
+        Have questions, need more info, or ready to book? Fill out the form below, or reach us directly.
+      </p>
+
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="bg-white p-4 rounded shadow-sm" data-aos="zoom-in" data-aos-delay="100">
+            <form action="https://formspree.io/f/xeoqdqqo" method="POST" onsubmit="showAlert(); return false;">
+              <div class="mb-3">
+                <label for="name" class="form-label">Your Name *</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email Address *</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+              </div>
+              <div class="mb-3">
+                <label for="phone" class="form-label">Phone Number</label>
+                <input type="tel" class="form-control" id="phone" name="phone">
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Your Message *</label>
+                <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+              </div>
+              <div class="d-grid gap-2 d-md-flex justify-content-md-between">
+                <button type="submit" class="btn btn-primary">Send Message</button>
+                <a href="https://wa.me/27640895231" target="_blank" class="btn btn-success">
+                  <i class="bi bi-whatsapp"></i> Message on WhatsApp
+                </a>
+              </div>
             </form>
-
-        </section>
-
-        <!-- Google Map Section -->
-        <section class="map">
-            <h2>Find Us</h2>
-            <div class="map-container">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509399!2d144.95373531531527!3d-37.8162794420217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d5df0dfde2f%3A0x5045675218ce640!2sYour+Business+Location!5e0!3m2!1sen!2sus!4v1619828873823!5m2!1sen!2sus" 
-                    width="100%" height="350" style="border:0; border-radius:10px;" allowfullscreen="" loading="lazy">
-                </iframe>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Cebi's Mobile Footcare | All Rights Reserved</p>
-        <div class="social-media">
-            <a href="https://www.facebook.com/yourpage" target="_blank" class="social-link">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://www.instagram.com/yourpage" target="_blank" class="social-link">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://wa.me/yourwhatsappnumber" target="_blank" class="social-link">
-                <i class="fab fa-whatsapp"></i>
-            </a>
+          </div>
         </div>
-    </footer>
+      </div>
 
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/yourwhatsappnumber" class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+      <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="200">
+        <p><strong>Or reach us directly:</strong></p>
+        <p>
+          <i class="bi bi-telephone-fill"></i> <a href="tel:0640895231">064 089 5231</a><br>
+          <i class="bi bi-envelope-fill"></i> <a href="mailto:cebismobilecare@example.com">cebismobilecare@example.com</a>
+        </p>
+      </div>
+    </div>
+  </section>
 
-    <script src="scripts.js"></script>
+  <!-- Map Section -->
+  <section class="py-5" data-aos="fade-up" data-aos-delay="300">
+    <div class="container">
+      <h2 class="text-center mb-4">📍 Find Us</h2>
+      <div class="map-responsive shadow-sm rounded">
+        <!-- Example: Gqeberha, Eastern Cape -->
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3303.1234567890123!2d25.60383131509347!3d-33.96082298066496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ec72b0d1234567%3A0xabcdefabcdef!2sGqeberha%2C%20Eastern%20Cape!5e0!3m2!1sen!2sza!4v1700000000000"
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-4 bg-dark text-light mt-5">
+    <div class="container text-center">
+      <p class="mb-1">&copy; 2025 Cebi's Mobile Foot Care. All rights reserved.</p>
+      <p>Owned and operated by <strong>Cebisa Diniwe</strong>, Gqeberha, Eastern Cape.</p>
+      <div class="d-flex justify-content-center gap-3">
+        <a class="text-light" href="https://www.facebook.com/profile.php?id=100077425159238" target="_blank">Facebook</a>
+        <a class="text-light" href="https://www.youtube.com" target="_blank">YouTube</a>
+        <a class="text-light" href="https://www.tiktok.com" target="_blank">TikTok</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+    function showAlert() {
+      alert("Thank you! Your message has been received. We'll get back to you soon.");
+      document.querySelector('form').reset();
+    }
+  </script>
 </body>
 </html>
